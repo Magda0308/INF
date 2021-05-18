@@ -71,4 +71,4 @@ plt.title('Liczba ludności w siatce')
 merged = gpd.sjoin(gdf, cell, how='left', op='within')
 dissolve = merged.dissolve(by ="index_right", aggfunc ="sum")
 cell.loc[dissolve.index, 'TOT'] = dissolve.TOT.values
- #jnrke
+
